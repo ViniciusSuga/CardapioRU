@@ -6,4 +6,4 @@ driver = webdriver.Firefox()
 c = crawler.Cardapio(driver)
 c.navigate()
 pratos = c.getPrato()
-
+print (pratos)

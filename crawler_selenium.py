@@ -16,7 +16,8 @@ class Cardapio:
 
 
     def getPrato(self):
-        semana,pratos = [],[]
+        semana = []
+        pratos = []
         for i in self.lista:
             xpath = self.inicio + i + self.fim
             pratos.append(xpath)
@@ -24,11 +25,3 @@ class Cardapio:
             pratodia = self.driver.find_element(By.XPATH,i).text
             semana.append(pratodia)
         return semana
-
-
-driver = webdriver.Firefox()
-c = Cardapio(driver)
-
-
-c.navigate()
-c.getPrato()
